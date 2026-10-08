@@ -1,6 +1,6 @@
 [project]
 name = "pluralize"
-version = "0.1.0"
+version = "0.1.1"
 description = "English pluralisation, including the irregular set."
 requires-python = ">=3.10"
 dependencies = []
