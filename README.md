@@ -50,3 +50,10 @@ PYTHONPATH=src python -m unittest discover -s tests
 ```
 
 The suite covers irregulars, hyphenated compounds, uncountable nouns, each suffix rule, case preservation, and the empty-string edge case. It does not test behaviour the implementation disclaims.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
